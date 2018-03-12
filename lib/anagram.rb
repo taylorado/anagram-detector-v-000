@@ -8,12 +8,12 @@ class Anagram
   end
 
   def match(potential_anagram_array)
-    matches = []
+    confirmed_anagrams = []
     potential_anagram_array.each do |potential_anagram|
       if potential_anagram.split("").sort == @word.split("").sort
-        matches << potential_anagram
+        confirmed_anagrams << potential_anagram
       end
     end
-    matches
+    confirmed_anagrams
   end
 end
